@@ -13,13 +13,15 @@ public class FirstTest {
     WebDriver driver;
     @BeforeMethod
     public void beforetest(){
-      System.setProperty("webdriver.chrome.driver","/Users/farid/eclipse-workspace/firstprojectselenium/src/driver/chromedriver 2");
-      driver = new ChromeDriver();
-      driver.get("https://www.statefarm.com/");
-      driver.manage().window().maximize();
-      driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        System.setProperty("webdriver.chrome.driver","/Users/farid/eclipse-workspace/week1/homework5/firstprojectselenium/src/driver/chromedriver 2");
+        driver = new ChromeDriver();
+        driver.get("https://www.statefarm.com/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
     }
+
+    
   @Test
     public void test1(){
         driver.findElement(By.xpath("//button[@class='-oneX-header-top-menu-btn']")).click();
@@ -41,7 +43,7 @@ public class FirstTest {
 }
 @Test
     public void test3(){
-     driver.findElement(By.xpath("//*[@id=\"oneX-header\"]/nav/section[3]/div[1]/div[1]/ul/li[2]/div/button/span")).click();
+     driver.findElement(By.xpath("//button[@class='-oneX-header-top-menu-btn -oneX-header-top-menu-btn__has-submenu'and@data-for='banking']")).click();
      driver.findElement(By.xpath("//*[@id=\"oneX-submenu-banking\"]/div/div/div[1]/section/ul[1]/li[1]/a")).click();
 
     }
@@ -95,7 +97,7 @@ public class FirstTest {
     }
   @AfterMethod
   public void aftermethod()  {
-      driver.close();
+//      driver.close();
 
 
   }
